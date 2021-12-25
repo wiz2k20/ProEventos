@@ -1,0 +1,96 @@
+>>> SEÇÃO 1
+
+(1)
+- Instalar .NET 5.0 SDK (v5.0.201)
+
+# node.js
+# postman
+# DB Browser for SLite
+
+(3)
+Extensões VS Code C#.net
+
+C#
+C# Extensions
+C# XML Documentation Comments
+NuGet Gallery
+NuGet Package Manager
+.NET Core Tools
+_________________________
+
+>>> SEÇÃO 2
+
+(5)(6)(7)
+dotnet --version (5.0.202)
+dotnet --info
+dotnet --list-sdks
+
+Back\src\global.json :Especificar versão dotnet :É possível criar de forma automática por comando
+{
+    "sdk": {
+        "version": "5.0.201"
+    }
+}
+
+(8)
+dotnet new
+dotnet new webapi -n ProEventos.API :Criar projeto :Back\src\
+
+cd ProEventos.API
+
+dotnet run : Rodar servidor
+https://localhost:5001
+https://localhost:5001/swagger/index.html :Acessar navegador
+http://localhost:5000/
+http://localhost:5000/swagger/index.html
+
+(9)
+dotnet watch run :Atualizar aplicação de forma automática
+
+(10)
+
+appsettings.Development.json :Em desenvolvimento
+appsettings.json :Em produção
+
+(11)
+
+Removido de 'public IEnumerable<Evento> Get()' em WeatherForecastController.cs
+#
+var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+#
+Removido de 'public EventoController(ILogger<EventoController> logger)'
+#
+_logger = logger;
+
+Deletado WeatherForecast.cs de 'Properties'
+
+(12)
+
+Postman
+https://localhost:5001/api/evento
+
+(16) GIT
+
+dotnet new gitignore
+
+
+
+_________________________
+>>> SEÇÃO 3
+>>> SEÇÃO 4
+>>> SEÇÃO 5
+>>> SEÇÃO 6
+
+
+
+
+
+
+
